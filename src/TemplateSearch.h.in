@@ -1,0 +1,3 @@
+// the configured options and settings for TemplateSearch
+#define TemplateSearch_VERSION_MAJOR @TemplateSearch_VERSION_MAJOR@
+#define TemplateSearch_VERSION_MINOR @TemplateSearch_VERSION_MINOR@
