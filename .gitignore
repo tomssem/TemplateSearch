@@ -36,3 +36,4 @@ build/
 
 # Vim stuff
 *.swp
+compile_commands.json
