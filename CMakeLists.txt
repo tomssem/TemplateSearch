@@ -1,9 +1,10 @@
 # A small project to show how templates can be used to dispatch different sorting implementations
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.19)
 
-project(TemplateSearch VERSION 0.1)
-list(APPEND INCLUDE_DIRS "${PROJECT_SOURCE_DIR}/src")
+project(TemplateSearch VERSION 0.1.0
+                       DESCRIPTION "Dispatching sort implementations using templates"
+                       LANGUAGES CXX)
 
 add_executable(run src/main.cpp)
 
@@ -16,9 +17,9 @@ add_library(
 target_link_libraries(run PRIVATE TemplateSearch)
 
 # config file to put version number in
-configure_file(src/${CMAKE_PROJECT_NAME}.h.in ${CMAKE_PROJECT_NAME}.h)
+configure_file(src/TemplateSearch.h.in src/TemplateSearch.h)
 
-target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC ${INCLUDE_DIRS})
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/src)
 
 # using standard 20, blazing edge baby
 set(CMAKE_CXX_STANDARD 20)
