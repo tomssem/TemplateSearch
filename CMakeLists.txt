@@ -34,3 +34,7 @@ if( EXISTS "${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json" )
     ${CMAKE_CURRENT_SOURCE_DIR}/compile_commands.json
   )
 endif()
+
+
+# get testing set-up
+add_subdirectory(tests)
