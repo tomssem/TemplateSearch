@@ -1,5 +1,3 @@
-![CI](https://github.com/tomssem/TemplateSearch/workflows/CI/badge.svg?branch=main)
-
 [![Test Status](https://github.com/tomssem/TemplateSearch/workflows/CI/badge.svg?branch=main)](https://github.com/tomssem/TemplateSearch/actions)
 
 # TemplateSearch
