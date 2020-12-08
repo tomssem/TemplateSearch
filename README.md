@@ -1,5 +1,7 @@
 ![CI](https://github.com/tomssem/TemplateSearch/workflows/CI/badge.svg?branch=main)
 
+[![Test Status](https://github.com/tomssem/TemplateSearch/workflows/CI/badge.svg?branch=master)](https://github.com/tomssem/TemplateSearch/actions)
+
 # TemplateSearch
 Using C++ to automatically optimize sorting
 
