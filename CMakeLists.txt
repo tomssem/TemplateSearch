@@ -38,3 +38,4 @@ endif()
 
 # get testing set-up
 add_subdirectory(tests)
+enable_testing()

@@ -2,6 +2,10 @@
 #include <catch2/catch.hpp>
 
 TEST_CASE("Check the greeting") {
-      CHECK("hello" == "Hello world!");
+    CHECK("hello" == "Hello world!");
+}
+
+TEST_CASE("Very simple") {
+    CHECK(3 == 3);
 }
 
