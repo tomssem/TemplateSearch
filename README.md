@@ -1,3 +1,5 @@
+![CI](https://github.com/tomssem/TemplateSearch/workflows/CI/badge.svg?branch=main)
+
 # TemplateSearch
 Using C++ to automatically optimize sorting
 
