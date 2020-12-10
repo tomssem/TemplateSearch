@@ -18,6 +18,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Catch2)
 
 target_link_libraries(tests Catch2::Catch2)
+target_link_libraries(tests TemplateSearch)
 
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/contrib)
 include(CTest)
