@@ -6,6 +6,11 @@ project(TemplateSearch VERSION 0.1.0
                        DESCRIPTION "Dispatching sort implementations using templates"
                        LANGUAGES CXX)
 
+# using standard 20, blazing edge baby
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 add_executable(run src/main.cpp)
 
 add_library(
@@ -20,11 +25,6 @@ target_link_libraries(run PRIVATE TemplateSearch)
 configure_file(src/TemplateSearch.h.in src/TemplateSearch.h)
 
 target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/src)
-
-# using standard 20, blazing edge baby
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Need following to export compile flags to YouCompleteMe
 SET( CMAKE_EXPORT_COMPILE_COMMANDS ON )

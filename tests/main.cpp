@@ -3,15 +3,14 @@
 
 #include "SearchAlgos.hpp"
 
-TEST_CASE("Check the greeting") {
-    CHECK("hello" == "hello");
-}
+TEST_CASE("Search algorithms can sort vectors of int") {
+    typedef std::vector<int> VInt;
+    typedef decltype (&TemplateSearch::quicksort<VInt::iterator>) D;
+    auto algorithm = GENERATE(static_cast<D>(&TemplateSearch::quicksort));
 
-TEST_CASE("Very simple") {
-    CHECK(3 == 3);
+    SECTION("Handle empty string ok") {
+        VInt empty = {};
+        algorithm(empty.begin(), empty.end());
+        REQUIRE(empty == VInt({}));
+    }
 }
-
-TEST_CASE("My func") {
-    CHECK(TemplateSearch::myFunc(2) == 0);
-}
-
