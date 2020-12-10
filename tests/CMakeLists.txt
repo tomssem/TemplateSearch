@@ -1,6 +1,8 @@
 Include(FetchContent)
 
-add_executable(tests main.cpp)
+add_executable(tests
+               main.cpp
+               TestSearchAlgos.cpp)
 Include(FetchContent)
 
 FetchContent_Declare(

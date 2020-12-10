@@ -1,6 +1,7 @@
-#include <functional>
-#include <iterator>
 #include <concepts>
+#include <functional>
+#include <iostream>
+#include <iterator>
 
 /*
  *  Algorithms targeted:
@@ -13,6 +14,8 @@
  *  - insertion sort
  *  - selection sort
  */
+
+using std::cout, std::endl;
 
 template <typename T, typename It>
 concept RandomAccessIteratorOfType = requires (It it) {
@@ -39,7 +42,7 @@ auto partition(It begin, It end, T pivot) {
         }
     }
 
-    return it;
+    return it - 1;
 }
 
 namespace TemplateSearch {
@@ -49,6 +52,9 @@ namespace TemplateSearch {
         if(begin < end) {
             auto pivot = pivotOnFirst(begin, end);
             auto pivotIndex = partition(begin, end, pivot);
+
+            cout << "Pivot index at " << std::distance(begin, pivotIndex) << endl;
+
 
             quicksort(begin, pivotIndex);
             quicksort(pivotIndex + 1, end);
